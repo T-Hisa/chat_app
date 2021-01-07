@@ -1,8 +1,15 @@
-# vue-router-test
+# chat_app
 
 > A Vue.js project
 
 ## Build Setup
+
+# 手順
+npm install -g @vue/cli-init
+vue init webpack .
+npm install
+npm install vuex --save
+npm install bootstrap-vue
 
 ``` bash
 # install dependencies

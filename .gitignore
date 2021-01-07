@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -103,24 +104,6 @@ dist
 # # TernJS port file
 # .tern-port
 
-# .DS_Store
-# node_modules/
-# /dist/
-# npm-debug.log*
-# yarn-debug.log*
-# yarn-error.log*
-# /test/unit/coverage/
-# /test/e2e/reports/
-# selenium-debug.log
-
-# # Editor directories and files
-# .idea
-# .vscode
-# *.suo
-# *.ntvs*
-# *.njsproj
-# *.sln
-
 手順
 amplify手順
 
@@ -130,3 +113,12 @@ amplify手順
 .env.production.local
 
 .DS_Store
+/dist/
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
