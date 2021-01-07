@@ -20,4 +20,11 @@
       いつ
       通知対象
 
-      
+
+開発手順
+npm install -g @vue/cli-init
+vue init webpack .
+npm install
+npm install vuex --save
+npm install bootstrap-vue
+npm install vue-i18n
