@@ -29,33 +29,5 @@ export default {
 </script>
 
 <style>
-.flex-display {
-  display: flex;
-}
-
-.sidebar {
-  flex-basis: 20%;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.menu {
-  font-size: 25px;
-  font-weight: 600;
-  color: black;
-}
-
-.sidebar-list li {
-  text-align: center;
-  padding: 10px;
-  margin: 5px;
-  width: 100%;
-  background: radial-gradient(deepskyblue, lightblue);
-}
-
-.skyblue {
-}
+@import "../assets/scss/sidebar.scss";
 </style>
