@@ -1,23 +1,18 @@
 <template>
   <div id="app">
     <top-view/>
-    <div class="flex-display">
-      <sidebar/>
-      <div class="container">
-        <router-view/>
-      </div>
-    </div>
+      <router-view/>
   </div>
 </template>
 
 <script>
-import Sidebar from '@/components/Sidebar'
+// import Sidebar from '@/components/Sidebar'
 import TopView from '@/components/Top'
 
 export default {
   name: 'App',
   components: {
-    Sidebar,
+    // Sidebar,
     TopView
   }
 }
