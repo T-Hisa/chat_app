@@ -5,6 +5,9 @@ import Home from '@/containers/Home'
 import Chat from '@/containers/Chat'
 import Login from '@/containers/Login'
 
+// var aws = require('aws-sdk')
+// console.log(aws)
+
 Vue.use(Router)
 
 export default new Router({
@@ -19,7 +22,7 @@ export default new Router({
           path: '/chat',
           name: 'Chat',
           component: Chat
-        },
+        }
       ]
     },
     {
