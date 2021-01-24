@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <form class="wrapper" action="">
+    <form class="wrapper" method="POST" action="">
       <div class="form-group">
         <label for="email">Eメール</label>
         <input class="form-control" id="email" type="text" v-model="email">
