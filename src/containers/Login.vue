@@ -11,6 +11,12 @@
       </div>
       <input type="submit" v-on:click="clickSendBtn">
     </form>
+    <amplify-authenticator>
+      <div>
+        My App
+        <amplify-sign-out></amplify-sign-out>
+      </div>
+    </amplify-authenticator>
   </div>
 </template>
 

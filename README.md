@@ -11,6 +11,8 @@ npm install
 npm install vuex --save
 npm install bootstrap-vue
 
+のみ修正
+
 ``` bash
 # install dependencies
 npm install

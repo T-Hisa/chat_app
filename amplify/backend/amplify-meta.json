@@ -22,7 +22,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-chatapp-staging-43818-deployment/amplify-cfn-templates/auth/chatappbf9ea07e-cloudformation-template.yml",
         "logicalId": "authchatappbf9ea07e"
       },
-      "lastPushTimeStamp": "2021-01-26T05:20:50.843Z",
+      "lastPushTimeStamp": "2021-01-26T06:04:01.790Z",
       "output": {
         "AppClientSecret": "bblmm0b6gltgl2r6rpgs5q7s1fu5sfvcn5mvqibikrammp82u92",
         "UserPoolId": "ap-northeast-1_FkXBHPx4f",
