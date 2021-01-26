@@ -120,3 +120,13 @@ dist
 # *.ntvs*
 # *.njsproj
 # *.sln
+
+手順
+amplify手順
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.DS_Store
