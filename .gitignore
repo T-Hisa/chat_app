@@ -111,7 +111,7 @@ amplify手順
 .env.development.local
 .env.test.local
 .env.production.local
-package-lock.json
+
 
 .DS_Store
 /dist/
@@ -135,7 +135,7 @@ amplify/backend/.temp
 build/
 dist/
 node_modules/
-src/aws-exports.js
+# src/aws-exports.js
 awsconfiguration.json
 amplifyconfiguration.json
 amplify-build-config.json
