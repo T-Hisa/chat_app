@@ -28,3 +28,4 @@ npm install
 npm install vuex --save
 npm install bootstrap-vue
 npm install vue-i18n
+npm install sass-loader node-sass

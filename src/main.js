@@ -20,7 +20,7 @@ const messages = {
 }
 let i18n = new VueI18n({
   locale: 'ja',
-  messages: messages,
+  messages: messages
 })
 
 Vue.config.productionTip = false
