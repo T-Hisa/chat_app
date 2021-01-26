@@ -9,7 +9,8 @@ import VueI18n from 'vue-i18n'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import Amplify, { Auth } from 'aws-amplify'
+import Amplify from 'aws-amplify'
+// import Amplify, { Auth } from 'aws-amplify'
 import awsconfig from './aws-exports'
 import '@aws-amplify/ui-vue'
 Amplify.configure(awsconfig)

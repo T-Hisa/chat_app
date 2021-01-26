@@ -111,6 +111,8 @@ amplify手順
 .env.development.local
 .env.test.local
 .env.production.local
+src/aws-exports.js
+
 
 
 .DS_Store

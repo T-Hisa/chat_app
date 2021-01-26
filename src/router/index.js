@@ -3,7 +3,7 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Home from '@/containers/Home'
 import Chat from '@/containers/Chat'
-import Login from '@/containers/Login'
+import Signin from '@/containers/Login'
 
 // var aws = require('aws-sdk')
 // console.log(aws)
@@ -27,8 +27,8 @@ export default new Router({
     },
     {
       path: '/login',
-      name: 'Login',
-      component: Login
+      name: 'Signin',
+      component: Signin
     }
     // {
     //   path: '/chat',
