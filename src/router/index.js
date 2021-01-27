@@ -1,28 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
+import Container from '@/containers/Container'
 import Home from '@/containers/Home'
-import Chat from '@/containers/Chat'
 import Signin from '@/containers/Signin'
 import Signup from '@/containers/Signup'
 import Wait from '@/containers/Wait'
-// var aws = require('aws-sdk')
-// console.log(aws)
+// import Err from '@/containers/Error'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      redirect: '/login',
-      component: Home,
+      name: 'Contaienr',
+      redirect: '/signin',
+      component: Container,
       children: [
         {
-          path: '/chat',
-          name: 'Chat',
-          component: Chat
+          path: '/home',
+          name: 'Home',
+          component: Home
         }
       ]
     },
@@ -40,16 +38,29 @@ export default new Router({
       path: '/wait',
       name: 'Wait',
       component: Wait
+    },
+    {
+      path: '*',
+      redirect: '/chat'
     }
     // {
-    //   path: '/chat',
-    //   name: 'Chat',
-    //   component: Chat
-    // },
-    // {
-    //   path: '/login',
-    //   name: 'Login',
-    //   component: Login
+    //   path: '*',
+    //   name: 'Error',
+    //   component: Err
     // }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  console.log({to})
+  console.log({from})
+  // if ('true') {
+  //   next()
+  // } else {
+  //   next({path: '/signin'})
+  // }
+  next()
+  // console.log({})
+})
+
+export default router

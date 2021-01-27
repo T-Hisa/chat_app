@@ -62,7 +62,7 @@ export default {
       }
     },
     sample () {
-      console.log("sample clicked!")
+      console.log('sample clicked!')
     }
   }
 }
