@@ -3,19 +3,23 @@
     <b-navbar class="custom-nav-bar" toggleable="lg" type="dark" variant="info">
       <span class="title">ChatApp</span>
       <div class="flex-display">
-        <div class="notify-wrapper">
+        <div v-if="isUserLogin" class="notify-wrapper">
           <i class="fas fa-bell custom-font"></i>
           <span>0
             <i class="fas fa-angle-down"></i>
           </span>
         </div>
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <b-nav-item href="#">Logout</b-nav-item>
-            <b-nav-item href="#" disabled>Disabled</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
+        <div v-if="isUserLogin">
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav>
+              <b-nav-item href="#">Logout</b-nav-item>
+              <b-nav-item href="#" disabled>Disabled</b-nav-item>
+            </b-navbar-nav>
+          </b-collapse>
+        </div>
+        <a v-if="isUserLogin" class="f-black" @click="onClickSignOutBtn">Sign Out</a>
+        <router-link v-else class="f-black" to="/signin">SignIn</router-link>
       </div>
     </b-navbar>
   </div>
@@ -23,7 +27,19 @@
 
 <script>
 export default {
-  name: 'TopView'
+  name: 'TopView',
+  props: {
+    isUserLogin: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    onClickSignOutBtn () {
+      console.log('sign out pushed!')
+      this.$emit('user-login')
+    }
+  }
 }
 </script>
 

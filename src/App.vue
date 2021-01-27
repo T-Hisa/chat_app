@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <top-view/>
-      <router-view/>
+    <top-view
+      v-bind:is-user-login="isUserLogin"
+    />
+    <router-view
+      @user-login="userLogin"
+    />
   </div>
 </template>
 
@@ -11,9 +15,20 @@ import TopView from '@/components/Top'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      isUserLogin: false
+    }
+  },
   components: {
     // Sidebar,
     TopView
+  },
+  methods: {
+    userLogin () {
+      this.isUserLogin = true
+      console.log('userLogin!!!')
+    }
   }
 }
 

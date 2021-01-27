@@ -2,6 +2,7 @@
 
 .title {
   font-family: 'Noto Sans JP', sans-serif;
+  color: white;
 }
 
 #app {
@@ -12,6 +13,10 @@
   color: #000;
   display: flex;
   flex-direction: column;
+}
+
+.f-black {
+  color: black !important;
 }
 
 h1, h2 {
@@ -27,14 +32,40 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #000 !important;
-}
-
 .flex-display {
   display: flex;
 }
 
 .wrapper {
-  padding: 30px 20px;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper {
+  margin-top: 5px;
+}
+
+.inner-wrapper {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.register-btn {
+  width: 100px;
+  margin: 10px auto;
+}
+
+.bg-skyblue {
+  background-color: #87ceeb;
 }
