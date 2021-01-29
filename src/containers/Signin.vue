@@ -36,33 +36,24 @@ export default {
     }
   },
   created () {
-    console.log(this.authState)
-    console.log(this.user)
   },
   mounted () {
-    console.log('Login')
-    console.log(this)
   },
   methods: {
     async onClickSignIn (e) {
       e.preventDefault()
       try {
-        console.log(this.name)
-        console.log(this.email)
-        console.log(this.password)
         let username = this.name
         let password = this.password
         const user = await Auth.signIn(username, password)
         this.user = user
         this.$router.push('/chat')
         this.$emit('user-login')
-        console.log(user)
       } catch (e) {
         console.log('error', e)
       }
     },
     sample () {
-      console.log('sample clicked!')
     }
   }
 }

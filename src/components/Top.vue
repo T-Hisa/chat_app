@@ -3,13 +3,13 @@
     <b-navbar class="custom-nav-bar" toggleable="lg" type="dark" variant="info">
       <span class="title">ChatApp</span>
       <div class="flex-display">
-        <div v-if="isUserLogin" class="notify-wrapper">
+        <div v-if="isUserSignin" class="notify-wrapper">
           <i class="fas fa-bell custom-font"></i>
           <span>0
             <i class="fas fa-angle-down"></i>
           </span>
         </div>
-        <div v-if="isUserLogin">
+        <div v-if="isUserSignin">
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
@@ -18,8 +18,11 @@
             </b-navbar-nav>
           </b-collapse>
         </div>
-        <a v-if="isUserLogin" class="f-black" @click="onClickSignOutBtn">Sign Out</a>
-        <router-link v-else class="f-black" to="/signin">SignIn</router-link>
+        <a v-if="isUserSignin" class="f-black" @click="onClickSignOutBtn">Sign Out</a>
+        <div v-else>
+          <router-link v-if="isPathSignin" class="f-black" to="/signup">Signup</router-link>
+          <router-link v-else class="f-black" to="/signin">SignIn</router-link>
+        </div>
       </div>
     </b-navbar>
   </div>
@@ -28,12 +31,35 @@
 <script>
 export default {
   name: 'TopView',
+  // data () {
+  //   return {
+  //     isPathSignin: false
+  //   }
+  // },
   props: {
-    isUserLogin: {
+    isUserSignin: {
+      type: Boolean,
+      default: false
+    },
+    isPathSignin: {
       type: Boolean,
       default: false
     }
   },
+  created () {
+    console.log('created in Top')
+  },
+  mounted () {
+    console.log('mounted in Top')
+  },
+  updated () {
+    console.log('updated in Top')
+  },
+  // computed: {
+  //   isPathSignin () {
+  //     return !!this.$route.path.includes('signin')
+  //   }
+  // },
   methods: {
     onClickSignOutBtn () {
       console.log('sign out pushed!')

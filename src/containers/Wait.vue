@@ -1,11 +1,18 @@
 <template>
   <div class="container">
     <div class="wrapper">
-      <p>※ 管理者の認証を待っています。しばらくお待ちください。</p>
-      <p>承認されたらメールに通知いたします。</p>
-      <p>
-        <router-link  outer-link to='/signin'>Sign in 画面へ</router-link>
-      </p>
+      <p>入力されたメールアドレスに認証コードを送信しました。</p>
+      <p>※画面遷移せずにメールをご確認ください。</p>
+      <div class="form-group confirmation-form">
+        <label for="code">認証コード</label>
+        <input id="code" type="text" v-model="code">
+        <button class="btn btn-light border-dark confirm-btn" @click="onClickConfirmBtn">認証</button>
+      </div>
+      <!-- <div class="resend-form">
+        <label for="name">登録した名前: </label>
+        <input id="name" type="text" v-model="username">
+        <a href="#" @click="onClickResendBtn">コード再送</a>
+      </div> -->
     </div>
   </div>
 </template>
@@ -17,40 +24,48 @@ export default {
   name: 'Wait',
   data () {
     return {
-      name: '',
-      email: '',
-      password: '',
-      msg: 'Welcome to Your Vue.js App',
-      user: Object,
-      authState: Object
+      code: '',
+      username: ''
     }
   },
   created () {
-    console.log(this.authState)
-    console.log(this.user)
+    // console.log(this.authState)
   },
   mounted () {
+    this.username = this.$route.params.username
+    console.log('username in wait', this.username)
     console.log('Login')
-    console.log(this)
   },
   methods: {
-    async onClickSignIn (e) {
+    async onClickConfirmBtn (e) {
       e.preventDefault()
       try {
-        console.log(this.name)
-        console.log(this.email)
-        console.log(this.password)
-        let username = this.name
-        let password = this.password
-        const user = await Auth.signIn(username, password)
-        this.user = user
-        console.log(user)
+        await Auth.confirmSignUp(this.username, this.code)
+        this.$router.push('/home')
       } catch (e) {
         console.log('error', e)
       }
     }
+    // async onClickResendBtn (e) {
+    //   e.preventDefault()
+    //   Auth.resendSignUp(this.username)
+    // }
   }
 }
 </script>
+
 <style>
+.confirm-btn {
+  height: 30px;
+  padding: 3px 10px;
+  margin-left: 10px;
+}
+.confirmation-form {
+  margin-top: 50px;
+  float: right;
+}
+.resend-form {
+  float: right;
+  margin-top: 40px;
+}
 </style>

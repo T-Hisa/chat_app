@@ -13,7 +13,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Contaienr',
+      name: 'Container',
       redirect: '/signin',
       component: Container,
       children: [
@@ -41,7 +41,7 @@ const router = new Router({
     },
     {
       path: '*',
-      redirect: '/chat'
+      redirect: '/home'
     }
     // {
     //   path: '*',

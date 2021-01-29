@@ -43,15 +43,10 @@ export default {
     })
   },
   mounted () {
-    console.log('Login')
-    console.log(this)
   },
   methods: {
     onClickSendBtn (e) {
       e.preventDefault()
-      console.log(this.email)
-      console.log(this.name)
-      console.log(this.password)
     },
     async onClickSignUp (e) {
       e.preventDefault()
@@ -63,9 +58,8 @@ export default {
             email: this.email
           }
         })
-        console.log({userData})
         this.user = userData.user
-        this.$router.push('/chat')
+        this.$router.push({ name: 'Wait', params: { username: this.name } })
       } catch (e) {
         console.log('error', e)
       }

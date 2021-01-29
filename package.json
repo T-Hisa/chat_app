@@ -14,6 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@aws-amplify/datastore": "^2.0.3",
     "@aws-amplify/ui-vue": "^0.2.33",
     "aws-amplify": "^3.0.3",
     "bootstrap-vue": "^2.21.2",

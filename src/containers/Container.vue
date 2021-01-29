@@ -16,6 +16,9 @@ export default {
   components: {
     Sidebar
   },
+  // created () {
+  //   console.log('created in Container')
+  // },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

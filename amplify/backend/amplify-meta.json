@@ -18,21 +18,23 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-chatapp-staging-43818-deployment/amplify-cfn-templates/auth/chatappbf9ea07e-cloudformation-template.yml",
-        "logicalId": "authchatappbf9ea07e"
-      },
-      "lastPushTimeStamp": "2021-01-26T17:11:07.536Z",
       "output": {
-        "AppClientSecret": "56bqfvhfm15eg175dl0qkestmlhsa3rtlss7lph8rkcufs0pbph",
-        "UserPoolId": "ap-northeast-1_4sMNK4wYR",
-        "AppClientIDWeb": "43nbnl1crskkrut0ku1k0varf3",
-        "AppClientID": "586venmqc366ospbqeg2s4uc07",
-        "IdentityPoolId": "ap-northeast-1:b706c1e7-687a-4516-a0e3-28affef69f68",
+        "AppClientSecret": "k7rdk3kuleskrfslt4ovhao7o3659dkurskr11ud7fvm9t12jgv",
+        "UserPoolId": "ap-northeast-1_hyA2t9bPF",
+        "AppClientIDWeb": "1cfnearul0pqc2ghtsplmknj1v",
+        "AppClientID": "42e1dmqh26o86tghir58nbs545",
+        "IdentityPoolId": "ap-northeast-1:a6f47d9f-fc93-41bc-9cd7-a43177c5be30",
         "IdentityPoolName": "chatappbf9ea07e_identitypool_bf9ea07e__staging",
         "UserPoolName": "chatappbf9ea07e_userpool_bf9ea07e"
       },
-      "lastPushDirHash": "bC7tclGnWwCoqOaJvW3EOzD4aoU="
+      "lastPushTimeStamp": "2021-01-29T14:19:16.695Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-chatapp-staging-43818-deployment/amplify-cfn-templates/auth/chatappbf9ea07e-cloudformation-template.yml",
+        "logicalId": "authchatappbf9ea07e"
+      }
     }
-  }
+  },
+  "function": {},
+  "storage": {},
+  "api": {}
 }
