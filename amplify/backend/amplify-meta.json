@@ -1,0 +1,40 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-chatapp-staging-43818-authRole",
+      "UnauthRoleArn": "arn:aws:iam::741956365642:role/amplify-chatapp-staging-43818-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::741956365642:role/amplify-chatapp-staging-43818-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-chatapp-staging-43818-deployment",
+      "UnauthRoleName": "amplify-chatapp-staging-43818-unauthRole",
+      "StackName": "amplify-chatapp-staging-43818",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:741956365642:stack/amplify-chatapp-staging-43818/500d9990-5f90-11eb-9b5a-0eef46d08d13",
+      "AmplifyAppId": "dob0qo0p1cndj"
+    }
+  },
+  "auth": {
+    "chatappbf9ea07e": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "AppClientSecret": "k7rdk3kuleskrfslt4ovhao7o3659dkurskr11ud7fvm9t12jgv",
+        "UserPoolId": "ap-northeast-1_hyA2t9bPF",
+        "AppClientIDWeb": "1cfnearul0pqc2ghtsplmknj1v",
+        "AppClientID": "42e1dmqh26o86tghir58nbs545",
+        "IdentityPoolId": "ap-northeast-1:a6f47d9f-fc93-41bc-9cd7-a43177c5be30",
+        "IdentityPoolName": "chatappbf9ea07e_identitypool_bf9ea07e__staging",
+        "UserPoolName": "chatappbf9ea07e_userpool_bf9ea07e"
+      },
+      "lastPushTimeStamp": "2021-01-29T14:19:16.695Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-chatapp-staging-43818-deployment/amplify-cfn-templates/auth/chatappbf9ea07e-cloudformation-template.yml",
+        "logicalId": "authchatappbf9ea07e"
+      }
+    }
+  },
+  "function": {},
+  "storage": {},
+  "api": {}
+}

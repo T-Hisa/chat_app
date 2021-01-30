@@ -1,0 +1,20 @@
+FROM node:lts-alpine3.12
+# FROM ubuntu:18.04
+# FROM node:15-alpine
+# FROM node:14.15-alpine
+RUN npm install -g http-server
+WORKDIR /app/
+# COPY package*.json /app/
+RUN npm install
+COPY ./ /app/
+RUN npm run build
+EXPOSE 8080
+CMD [ "http-server", "dist"]
+# RUN apt-get update && apt-get install -y nodejs npm
+# RUN npm install
+# RUN apk add git && \
+#     npm install yarn && \
+#     rm package-lock.json && \
+#     yarn install && \
+#     yarn run build
+# CMD ["/bin/sh"]

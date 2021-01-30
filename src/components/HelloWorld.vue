@@ -2,6 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+    <b-button>BootStrap</b-button>
+    <sidebar/>
     <ul>
       <li>
         <a
@@ -84,8 +86,13 @@
 </template>
 
 <script>
+import Sidebar from '@/components/Sidebar'
+
 export default {
   name: 'HelloWorld',
+  components: {
+    Sidebar
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -93,7 +100,6 @@ export default {
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
